@@ -1,0 +1,42 @@
+@use 'sass:math';
+/*------------------------------------*\
+    VARS.SCSS
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    $OVERRIDES
+\*------------------------------------*/
+/**
+ * Place any variables that should override inuit.css’ defaults here.
+ */
+$base-font-family: 'Avenir Next', 'Raleway', 'Avenir', 'sans-serif';
+
+$english-quotes: false;
+$responsive-extra: true;
+$spacing-unit: 24px;
+$spacing-unit--small: math.div(24px, 2);
+
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+/**
+ * Place any of your own variables that sit on top of inuit.css here.
+ */
+
+main {
+  overflow-x: hidden;
+}
+$main-color: #183a37;
+$bg-body: #fdf0d5;
+$box-shadow: 0 0 9px 0 rgba(black, 0.28);
+$box-shadow--error: 0 0 9px 0 rgba(red, 0.28);
+$box-shadow--success: 0 0 9px 0 rgba(green, 0.28);
+$border-radius:  2rem;
+
+$browser-context: 16; // Default
+$base-font-size: $browser-context px;
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
